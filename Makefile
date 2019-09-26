@@ -63,6 +63,7 @@ create_test_file:	create_test_file.f90
 #	s.f90 $< $(EXTRA_OBJECTS) -o $@ $(FFLAGS) -l$(LIBRMN)
 	s.f90 $< -o $@ $(FFLAGS) -l$(LIBRMN)
 	rm -f test.fst
+	./$@
 
 tests: test.fst
 	./run_tests.sh $(EDITFST) test.fst
